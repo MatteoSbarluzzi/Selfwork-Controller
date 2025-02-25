@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blog di febbraio 2025</title>
+    <title>Blog di Matteo - Homepage</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
@@ -25,30 +25,23 @@
       </div>
     </nav>
     
-    <header class="hero">
-      <div class="container text-center text-white">
-        <h1>Benvenuto nel blog di febbraio 2025</h1>
-        <p>Scopri le novità di questo mese!</p>
-      </div>
-    </header>
-    
     <div class="container mt-5">
       <div class="row">
         @foreach ($posts as $post)
           <div class="col-md-4">
             <div class="card mb-4">
               <img src="https://picsum.photos/400/300?random={{ $loop->index }}" class="card-img-top" alt="Immagine post">
-              <div class="card-body d-flex flex-column justify-content-center text-center">
+              <div class="card-body text-center">
                 <h5 class="card-title">{{ $post['title'] }}</h5>
                 <p class="card-text">{{ Str::limit($post['content'], 100) }}</p>
-                <a href="{{ route('pagina_dettaglio' . ($loop->index % 3 + 1)) }}" class="btn btn-primary">Leggi di più</a>
+                <a href="{{ route('articolo_dettaglio', ['id' => $post['id']]) }}" class="btn btn-primary">Leggi di più</a>
               </div>
             </div>
           </div>
         @endforeach
       </div>
     </div>
-    
+
     <footer class="bg-dark text-white text-center p-3 mt-5">
     <div class="container">
         <h5>Contatti</h5>
@@ -71,7 +64,5 @@
         </div>
     </div>
     </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

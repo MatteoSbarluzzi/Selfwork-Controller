@@ -1,13 +1,14 @@
+<!doctype html>
 <html lang="it">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Servizi - Blog di Matteo</title>
+    <title>{{ $member['name'] }} {{ $member['surname'] }} - Blog di Matteo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
     <style>
-      /* Imposta altezza minima per tutta la pagina */
+      /* Layout per mantenere il footer sempre in basso */
       .wrapper {
         min-height: 100vh;
         display: flex;
@@ -18,7 +19,7 @@
       }
     </style>
   </head>
-  <body class="w-100">
+  <body>
 
     <div class="wrapper">
       <!-- Navbar -->
@@ -40,18 +41,17 @@
 
       <!-- Contenuto principale -->
       <div class="container mt-5 content">
-        <h2 class="mb-4 text-center">I nostri Servizi</h2>
         <div class="row">
-          @foreach ($services as $service)
-            <div class="col-md-4 mb-4">
-              <div class="card bg-dark text-white">
-                <div class="card-body text-center">
-                  <h5 class="card-title">{{ $service['name'] }}</h5>
-                  <p class="card-text">{{ $service['description'] }}</p>
-                </div>
-              </div>
-            </div>
-          @endforeach
+          <div class="col-lg-8">
+            <h1>{{ $member['name'] }} {{ $member['surname'] }}</h1>
+            <p><strong>Ruolo:</strong> {{ $member['role'] }}</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Sed posuere consectetur est at lobortis.</p>
+          </div>
+
+          <div class="col-lg-4">
+            <img src="https://picsum.photos/350/200?random={{ rand(1, 100) }}" class="img-fluid mb-3" alt="Immagine Team Member">
+          </div>
         </div>
       </div>
 

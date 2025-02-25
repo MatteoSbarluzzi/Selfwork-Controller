@@ -2,18 +2,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blog di febbraio 2025</title>
+    <title>Chi Siamo - Blog di Matteo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
-    <style>
-      body {
-        background-image: url('https://picsum.photos/1920/1080?random=4');
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-      }
-    </style>
   </head>
   <body class="w-100">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -32,61 +24,27 @@
       </div>
     </nav>
 
-    <div class="container-fluid mt-5">
+    <div class="container mt-5">
       <h1 class="text-center mb-4">Chi Siamo</h1>
-      <section>
-        <h2>La Nostra Missione</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nobis fugiat, vel cumque nemo reiciendis aut in repudiandae. Amet vitae tempora quia corrupti dicta saepe vel sapiente porro magni incidunt?
-        </p>
-      </section>
 
       <section class="mt-5">
         <h2>Il Nostro Team</h2>
         <div class="row">
-          <div class="col-md-4">
-            <div class="card">
-              <img src="https://picsum.photos/150/150?random=1" class="card-img-top" alt="Team Member">
-              <div class="card-body">
-                <h5 class="card-title">Mario Volpi</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut beatae, asperiores officiis iste, odit numquam aliquam dicta veniam consectetur a rerum minima quae dignissimos pariatur? Repellat voluptatum eos perspiciatis sunt!</p>
+          @foreach ($team as $member)
+            <div class="col-md-4">
+              <div class="card">
+                <img src="https://picsum.photos/150/150?random={{ $loop->index }}" class="card-img-top" alt="Team Member">
+                <div class="card-body">
+                  <h5 class="card-title">{{ $member['name'] }} {{ $member['surname'] }}</h5>
+                  <p class="card-text"><strong>Ruolo:</strong> {{ $member['role'] }}</p>
+                  <a href="{{ route('chi_siamo_dettaglio', ['name' => $member['name']]) }}" class="btn btn-primary">Scopri di più</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img src="https://picsum.photos/150/150?random=2" class="card-img-top" alt="Team Member">
-              <div class="card-body">
-                <h5 class="card-title">Luca Bianchi</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat molestias sint dolorum eos minima saepe obcaecati nihil illo, accusantium facilis optio asperiores laudantium repellat, tempora omnis, non harum voluptates porro?</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img src="https://picsum.photos/150/150?random=3" class="card-img-top" alt="Team Member">
-              <div class="card-body">
-                <h5 class="card-title">Anna Rossi</h5>
-                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum accusantium ducimus id maxime fuga atque molestias ratione! Labore, sapiente quasi soluta voluptatibus neque enim ipsa ducimus aut fuga repellendus eaque!</p>
-              </div>
-            </div>
-          </div>
+          @endforeach
         </div>
       </section>
-
-      <section class="mt-5">
-        <h2>La Nostra Visione</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ut asperiores possimus, eos eius dolorum minus, quas tempora explicabo, ipsam quae veniam. Aperiam ab provident consequatur, ex perspiciatis perferendis quo..
-        </p>
-      </section>
-
-      <section class="mt-5">
-        <h2>I Nostri Valori</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat id enim eveniet iure atque eos, mollitia unde voluptas perspiciatis repellat temporibus velit, voluptates quos fugit nostrum sunt adipisci quidem nobis.</p>
-      </section>
     </div>
-
 
     <footer class="bg-dark text-white text-center p-3 mt-5">
     <div class="container">
@@ -110,3 +68,5 @@
         </div>
     </div>
     </footer>
+  </body>
+</html>

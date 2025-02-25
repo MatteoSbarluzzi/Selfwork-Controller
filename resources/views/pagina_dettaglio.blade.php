@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blog di febbraio 2025</title>
+    <title>{{ $article['title'] }} - Blog di Matteo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
@@ -28,21 +28,19 @@
     <div class="container mt-5">
       <div class="row">
         <div class="col-lg-8">
-          <h1>Esordio col botto</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-          <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Sed posuere consectetur est at lobortis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime tenetur, maiores, ipsam error eum obcaecati rem corporis unde nesciunt accusamus distinctio atque sed itaque? Atque nisi sequi earum harum quae!LoremAenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla.</p>
+          <h1>{{ $article['title'] }}</h1>
+          <p>{{ $article['content'] }}</p>
         </div>
 
-        
         <div class="col-lg-4">
-          <img src="https://picsum.photos/350/200" class="img-fluid mb-3" alt="Immagine 1">
-          <img src="https://picsum.photos/350/200?grayscale" class="img-fluid" alt="Immagine 2">
+          <img src="https://picsum.photos/350/200?random={{ $article['id'] }}" class="img-fluid mb-3" alt="Immagine articolo">
+          <img src="https://picsum.photos/350/200?random={{ $article['id']+10 }}" class="img-fluid" alt="Immagine articolo 2">
         </div>
       </div>
     </div>
 
     <footer class="bg-dark text-white text-center p-3 mt-5">
-      <div class="container">
+    <div class="container">
         <h5>Contatti</h5>
         <p>Email: mariovolpi@infoblog.com</p>
         <p>Telefono: +39 123 456 7890</p>
@@ -61,7 +59,7 @@
                 <i class="bi bi-linkedin" style="font-size: 1.5rem; display: inline-block;"></i>
             </a>
         </div>
-      </div>
+    </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
