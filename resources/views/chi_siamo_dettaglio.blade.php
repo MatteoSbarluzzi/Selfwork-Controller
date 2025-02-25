@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
     <style>
-      /* Layout per mantenere il footer sempre in basso */
+
       .wrapper {
         min-height: 100vh;
         display: flex;
@@ -22,7 +22,6 @@
   <body>
 
     <div class="wrapper">
-      <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
           <a class="navbar-brand" href="#">Blog di Matteo</a>
@@ -39,7 +38,6 @@
         </div>
       </nav>
 
-      <!-- Contenuto principale -->
       <div class="container mt-5 content">
         <div class="row">
           <div class="col-lg-8">
@@ -55,7 +53,6 @@
         </div>
       </div>
 
-      <!-- Footer fisso in fondo -->
       <footer class="bg-dark text-white text-center p-3 mt-5">
         <div class="container">
           <h5>Contatti</h5>

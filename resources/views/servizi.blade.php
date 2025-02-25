@@ -6,22 +6,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
-    <style>
-      /* Imposta altezza minima per tutta la pagina */
-      .wrapper {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-      }
-      .content {
-        flex: 1;
-      }
-    </style>
+
   </head>
   <body class="w-100">
 
     <div class="wrapper">
-      <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
           <a class="navbar-brand" href="#">Blog di Matteo</a>
@@ -38,7 +27,7 @@
         </div>
       </nav>
 
-      <!-- Contenuto principale -->
+
       <div class="container mt-5 content">
         <h2 class="mb-4 text-center">I nostri Servizi</h2>
         <div class="row">
@@ -55,7 +44,7 @@
         </div>
       </div>
 
-      <!-- Footer fisso in fondo -->
+
       <footer class="bg-dark text-white text-center p-3 mt-5">
         <div class="container">
           <h5>Contatti</h5>
