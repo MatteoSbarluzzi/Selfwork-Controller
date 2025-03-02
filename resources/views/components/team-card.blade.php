@@ -4,7 +4,6 @@
         <div class="card-body">
             <h5 class="card-title">{{ $name }} {{ $surname }}</h5>
             <p class="card-text"><strong>Ruolo:</strong> {{ $role }}</p>
-            <a href="{{ route('chi_siamo_dettaglio', ['name' => $name]) }}" class="btn btn-primary">Scopri di più</a>
         </div>
     </div>
 </div>

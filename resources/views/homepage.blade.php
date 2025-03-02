@@ -1,22 +1,14 @@
-<!doctype html>
-<html lang="it">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blog di Matteo - Homepage</title>
-    @vite('resources/css/app.css')
-</head>
-<body>
-    <x-navbar />
+@extends('layouts.app')
 
-    <div class="container mt-5">
-        <div class="row">
-            @foreach ($posts as $post)
-                <x-card :id="$post['id']" :title="$post['title']" :content="$post['content']" />
-            @endforeach
-        </div>
+@section('title', 'Homepage')
+
+@section('content')
+    <h1 class="text-center mb-4">Benvenuto nel Blog di Matteo</h1>
+    <div class="row">
+        @foreach ($posts as $index => $post)
+            <x-card :title="$post['title']" :content="$post['content']" :index="$index">
+                <a href="{{ route('articolo_dettaglio', ['id' => $post['id']]) }}" class="btn btn-primary">Leggi di più</a>
+            </x-card>
+        @endforeach
     </div>
-
-    <x-footer />
-</body>
-</html>
+@endsection
