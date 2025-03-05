@@ -8,7 +8,7 @@
                     <i class="bi bi-star-fill text-warning"></i>
                 @endfor
                 @for ($i = $rating; $i < 5; $i++)
-                    <i class="bi bi-star text-secondary"></i>
+                    <i class="bi bi-star text-secondary"></i> 
                 @endfor
             </div>
         </div>

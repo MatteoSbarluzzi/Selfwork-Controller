@@ -6,7 +6,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                {{ $slot }}  {{-- Questo permette di inserire contenuto dinamico nella navbar --}}
+                <li class="nav-item"><a class="nav-link" href="{{ route('homepage') }}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('chi_siamo') }}">Chi siamo</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('servizi') }}">Servizi</a></li>
             </ul>
         </div>
     </div>

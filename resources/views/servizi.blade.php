@@ -1,8 +1,4 @@
-@extends('layouts.app')
-
-@section('title', 'Servizi')
-
-@section('content')
+<x-layout title="Servizi">
     <h1 class="text-center mb-4">I Nostri Servizi</h1>
     <div class="row">
         @foreach ($services as $index => $service)
@@ -19,4 +15,4 @@
             <x-review-card name="Marco Verdi" review="Ottimo supporto, personale molto gentile." rating="5" />
         </div>
     </section>
-@endsection
+</x-layout>

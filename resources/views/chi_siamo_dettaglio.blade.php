@@ -1,8 +1,4 @@
-@extends('layouts.app')
-
-@section('title', $member['name'] . ' ' . $member['surname'])
-
-@section('content')
+<x-layout :title="$member['name'] . ' ' . $member['surname']">
     <div class="row">
         <div class="col-lg-8">
             <h1>{{ $member['name'] }} {{ $member['surname'] }}</h1>
@@ -15,4 +11,4 @@
             <img src="https://picsum.photos/350/200?random={{ rand(1, 100) }}" class="img-fluid mb-3" alt="Immagine Team Member">
         </div>
     </div>
-@endsection
+</x-layout>

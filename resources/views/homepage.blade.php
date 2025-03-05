@@ -1,8 +1,4 @@
-@extends('layouts.app')
-
-@section('title', 'Homepage')
-
-@section('content')
+<x-layout title="Homepage">
     <h1 class="text-center mb-4">Benvenuto nel Blog di Matteo</h1>
     <div class="row">
         @foreach ($posts as $index => $post)
@@ -11,4 +7,4 @@
             </x-card>
         @endforeach
     </div>
-@endsection
+</x-layout>
